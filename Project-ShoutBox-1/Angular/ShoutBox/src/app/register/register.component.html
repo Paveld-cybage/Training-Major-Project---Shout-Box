@@ -1,0 +1,56 @@
+<section class="vh-100">
+  <header>
+    <p style="display:inline; color:rgb(42, 42, 253)">Shout</p>
+    <p style="display:inline; color:rgb(102, 102, 102)">Box</p>
+  </header>
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="../../assets/register_background.webp" class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="register" (ngSubmit)="registerSubmited()">
+          <h2>Register Here</h2><br>
+
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <label class="form-label"> Name:</label>
+            <input type="text" class="form-control form-control-lg" placeholder="Enter a Name "
+              formControlName="name" />
+            <small *ngIf="register.get('name')?.invalid && register.get('name')?.touched" class="text-danger">Name is
+              Required</small>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label">Email address:</label>
+            <input type="email" class="form-control form-control-lg" placeholder="Enter a valid email address"
+              formControlName="email" />
+            <small *ngIf="register.get('email')?.invalid && register.get('email')?.touched" class="text-danger">Valid
+              Email is
+              Required</small>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <label class="form-label">Password:</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Enter password"
+              formControlName="password" />
+            <small *ngIf="register.get('password')?.invalid && register.get('password')?.touched"
+              class="text-danger">password between 8 to 16 characters which contain at least one lowercase letter, one
+              uppercase letter, one numeric digit, and one special character</small>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button [disabled]="register.invalid" type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem; ">Submit</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Already have acoount!
+              <a (click)="loginRoute()" class="link-danger">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

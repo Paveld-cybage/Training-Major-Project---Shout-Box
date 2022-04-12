@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="top">
+    <h1>Friends</h1>
+  </div>
+  <div class="row">
+    <div class="shadow">
+      <div class="col-sm-12 main" *ngFor="let req of friendList">
+        <div class="col-sm-10">
+          <h2>{{req.name}}</h2>
+          <button class="btn btn-danger">Remove Friend</button>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>

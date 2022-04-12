@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="top">
+    <h1>Pending Requests</h1>
+  </div>
+  <div class="row">
+    <div class="shadow">
+      <div class="col-sm-12 main" *ngFor="let req of requestList">
+        <div class="col-sm-10">
+          <h2>{{req.name}}</h2>
+        </div>
+        <div class="adjust">
+          <button class="btn btn-primary" (click)="acceptRequest(req)">Accept</button>&nbsp;
+          <button class="btn btn-danger" (click)="decline(req)">Denied</button>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>

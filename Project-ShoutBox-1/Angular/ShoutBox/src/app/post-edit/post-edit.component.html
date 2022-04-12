@@ -1,0 +1,11 @@
+<form (ngSubmit)="updatePost()" class="pt-5">
+    <div class="form-group">
+        <label for="description">Shouts</label>
+        <textarea name="description" class="form-control" [(ngModel)]="post.description"></textarea>
+    </div>
+    <button class="btn btn-dark btn-sm mt-4">Update</button>&nbsp;&nbsp;
+    <button class="btn btn-primary btn-sm mt-4" (click)="backClicked()">Go Back</button>
+</form>
+
+
+

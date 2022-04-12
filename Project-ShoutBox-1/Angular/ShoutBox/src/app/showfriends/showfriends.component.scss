@@ -1,0 +1,47 @@
+.row {
+  padding: 20px;
+}
+
+.container {
+  color: grey;
+  margin-top: 75px;
+}
+
+.top {
+  text-align: center;
+}
+
+.shadow {
+  background-color: #eee;
+  box-shadow: 0px 0px 5px 0px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+
+.main:hover {
+  background-color: rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+h2 {
+  color: black;
+  padding: 12px;
+}
+
+h1 {
+  color: black;
+}
+
+button {
+  margin-left: 84%;
+  margin-top: -98px;
+}
+
+button:hover {
+  background-color: orangered;
+}
+
+body {
+  margin-top: 30px;
+  background: #3BC0C7;
+}

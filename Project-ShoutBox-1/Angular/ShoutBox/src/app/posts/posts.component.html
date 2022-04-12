@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="top">
+    {{token}}
+  </div>
+  <form (ngSubmit)="insertData()">
+    <div class="form-group">
+      <label for="description">Write Your Shouts</label>
+      <textarea name="description" class="form-control" [(ngModel)]="post.description"></textarea>
+    </div>
+    <button class="btn btn-dark btn-sm mt-4">Create Shouts</button>
+  </form>
+  
+  <!-- Displaying the shouts and adding further features (edit, delete) -->
+  <h1>What your friends says...</h1>
+
+  <div class="card" style="width: 50rem; " *ngFor="let pst of posts">
+    <div class="card-body">
+      <h3>{{ pst.name }}</h3>
+      <p class="card-text">{{ pst.description }}</p>
+      <div class="main" *ngIf="pst.user[0].name == token">
+        <button class="btn btn-warning btn-sm mx-2" routerLink="edit/{{ pst.id }}">Edit</button>
+        <button class="btn btn-danger btn-sm" (click)="deleteData(pst.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

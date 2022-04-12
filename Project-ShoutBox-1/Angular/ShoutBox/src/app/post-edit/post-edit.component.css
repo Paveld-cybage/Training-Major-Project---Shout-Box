@@ -1,0 +1,14 @@
+.pt-5{
+    margin-top: 100px;
+    margin-left: 21%;
+    width: 60%;
+    border: 1px solid grey;
+    padding: 12px;
+    border-radius: 20px;
+    height: 230px;
+}
+
+label{
+    font-size: 23px;
+    font-weight: bold;
+}

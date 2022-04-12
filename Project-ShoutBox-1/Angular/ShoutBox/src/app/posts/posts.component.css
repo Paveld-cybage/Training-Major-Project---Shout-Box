@@ -1,0 +1,42 @@
+.container {
+  margin-top: 75px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+  margin: 0 auto;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: #22577E;
+  border: 1px solid #000000;
+  color: white;
+  border-radius: 10px;
+}
+
+.main {
+  margin-left: 75%;
+}
+
+.top{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #FAFFAF;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  padding: 15px;
+}
+
+textarea {
+  height: 150px;
+  border-color: black;
+}
